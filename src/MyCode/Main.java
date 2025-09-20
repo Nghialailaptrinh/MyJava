@@ -1,5 +1,7 @@
+
 /// ////////////////////////////////
 class Node {
+
     int value;
     Node next;
 
@@ -16,6 +18,7 @@ class Node {
 /// ///////////////////////////////////////
 // Queue dùng linked list
 class QueueNode {
+
     Node head, tail;
     int numberNode;
 
@@ -40,13 +43,17 @@ class QueueNode {
 
     // Xóa node đầu (dequeue)
     void delete() {
-        if (numberNode == 0) return; // rỗng
-        Node temp = head;
+        if (numberNode == 0) {
+            return; // rỗng
+
+                }Node temp = head;
         head = head.next;  // cập nhật head mới
         temp.next = null;  // giải phóng liên kết (Java GC sẽ thu dọn)
         numberNode--;
-        if (numberNode == 0) tail = null; // queue rỗng sau delete
-    }
+        if (numberNode == 0) {
+            tail = null; // queue rỗng sau delete
+
+            }}
 
     // In queue
     void print() {
@@ -61,6 +68,7 @@ class QueueNode {
 
 /// /////////////
 class Stack {
+
     int numberNode;
     Node head, tail;
 
@@ -85,7 +93,9 @@ class Stack {
 
     // Xóa node đầu
     public void delete() {
-        if (numberNode == 0) return;
+        if (numberNode == 0) {
+            return;
+        }
 
         head = head.next;
         numberNode--;
